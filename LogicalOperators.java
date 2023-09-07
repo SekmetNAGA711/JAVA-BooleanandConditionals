@@ -84,10 +84,10 @@ public class LogicalOperators {
         boolean notCashOrCredit = !(option.equals("cash") || option.equals("credit"));
         // if payment option is NOT cash or credit: System.out.println("Please choose another payment option");
         // otherwise: System.out.println("Sold. Pleasure doing business with you!");
-        if(memberAge > 16 || hasMembership){
-            System.out.println("The user can access the service.");
+        if(!(option.equals("cash") || option.equals("credit"))){
+            System.out.println("Please choose another payment option");
         } else {
-            System.out.println("The user cannot access the service.");
+            System.out.println("Sold. Pleasure doing business with you!");
         }
 
 
@@ -98,12 +98,27 @@ public class LogicalOperators {
      boolean notVowel = !((letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U'));
         // if letter is NOT a vowel: System.out.println("The letter " + letter + " is a consonant");
         // otherwise: System.out.println("The letter " + letter + " is a vowel");
+        if(!((letter == 'A' || letter == 'E' || letter == 'I' || letter == 'O' || letter == 'U'))){
+            System.out.println("The letter " + letter + " is a consonant");
+        } else {
+            System.out.println("The letter " + letter + " is a vowel");
+        }
+
+
+
+
 
         String move = "stay";
         boolean isHitOrStay = move.equals("hit") || move.equals("stay");
         boolean notHitOrStay = !(move.equals("hit") || move.equals("stay"));
         // if move is NOT hit or stay: System.out.println("Please choose a valid move");
         // otherwise: System.out.println("You win 10 bucks!");
+
+          if(!(move.equals("hit") || move.equals("stay"))){
+            System.out.println("Please choose a valid move");
+        } else {
+            System.out.println("You win 10 bucks!");
+        }
 
     }
 }
